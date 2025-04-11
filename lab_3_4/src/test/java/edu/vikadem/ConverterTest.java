@@ -141,6 +141,57 @@ import static org.junit.jupiter.api.Assertions.*;
         Assertions.assertEquals("MM", Converter.convertToRoman(2000));
     }
 
+    @Test
+    void whenRoman_I_ThenArabic_1() {
+        Assertions.assertEquals(1, Converter.convertToArabic("I"));
+    }
+
+    @Test
+    void whenRoman_IV_ThenArabic_4() {
+        Assertions.assertEquals(4, Converter.convertToArabic("IV"));
+    }
+
+    @Test
+    void whenRoman_IX_ThenArabic_9() {
+        Assertions.assertEquals(9, Converter.convertToArabic("IX"));
+    }
+
+    @Test
+    void whenRoman_XLII_ThenArabic_42() {
+        Assertions.assertEquals(42, Converter.convertToArabic("XLII"));
+    }
+
+    @Test
+    void whenRoman_LXXX_ThenArabic_80() {
+        Assertions.assertEquals(80, Converter.convertToArabic("LXXX"));
+    }
+
+    @Test
+    void whenRoman_XC_ThenArabic_90() {
+        Assertions.assertEquals(90, Converter.convertToArabic("XC"));
+    }
+
+    @Test
+    void whenRoman_C_ThenArabic_100() {
+        Assertions.assertEquals(100, Converter.convertToArabic("C"));
+    }
+
+    @Test
+    void whenRoman_DCCVII_ThenArabic_707() {
+        Assertions.assertEquals(707, Converter.convertToArabic("DCCVII"));
+    }
+
+    @Test
+    void whenRoman_MCMXC_ThenArabic_1990() {
+        Assertions.assertEquals(1990, Converter.convertToArabic("MCMXC"));
+    }
+
+    @Test
+    void whenRoman_MMMCMXCIX_ThenArabic_3999() {
+        Assertions.assertEquals(3999, Converter.convertToArabic("MMMCMXCIX"));
+    }
+
+
 
 
 }
