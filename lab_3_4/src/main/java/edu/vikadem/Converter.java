@@ -1,6 +1,8 @@
 package edu.vikadem;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /*
 @author admin
@@ -33,27 +35,37 @@ import java.util.List;
     }
 
     public static int convertToArabic(String input) {
-        String romanNumeral = input.toUpperCase();
+        if (input == null) {
+            throw new NullPointerException("Input cannot be null");
+        }
+
+        input = input.trim().toUpperCase();
+        if (input.isEmpty()) {
+            throw new IllegalArgumentException("Input cannot be empty");
+        }
+
+        // Римське число має відповідати правильному патерну
+        if (!input.matches("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$")) {
+            throw new IllegalArgumentException(input + " is not a valid Roman numeral");
+        }
+
         int result = 0;
+        int i = 0;
 
         List<RomanNumeral> romanNumerals = RomanNumeral.getReverseSortedValues();
 
-        int i = 0;
-
-        while ((romanNumeral.length() > 0) && (i < romanNumerals.size())) {
+        while (input.length() > 0 && i < romanNumerals.size()) {
             RomanNumeral symbol = romanNumerals.get(i);
-            if (romanNumeral.startsWith(symbol.name())) {
+            if (input.startsWith(symbol.name())) {
                 result += symbol.getValue();
-                romanNumeral = romanNumeral.substring(symbol.name().length());
+                input = input.substring(symbol.name().length());
             } else {
                 i++;
             }
         }
 
-        if (romanNumeral.length() > 0) {
-            throw new IllegalArgumentException(input + " cannot be converted to a Roman Numeral");
-        }
-
         return result;
     }
+
+
 }
