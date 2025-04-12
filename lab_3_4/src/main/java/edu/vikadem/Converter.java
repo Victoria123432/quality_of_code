@@ -44,7 +44,6 @@ import java.util.Map;
             throw new IllegalArgumentException("Input cannot be empty");
         }
 
-        // Римське число має відповідати правильному патерну
         if (!input.matches("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$")) {
             throw new IllegalArgumentException(input + " is not a valid Roman numeral");
         }
@@ -66,6 +65,5 @@ import java.util.Map;
 
         return result;
     }
-
 
 }
