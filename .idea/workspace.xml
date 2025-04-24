@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8502aa9-24ce-4ed0-9396-7fd2183fb03d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/lab_3/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_3/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_3/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_3/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_3/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_3/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_3/src/main/java/edu/vikadem/Converter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_3/src/main/java/edu/vikadem/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_3/src/main/java/edu/vikadem/RomanNumeral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_3/src/test/java/edu/vikadem/ConverterTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="c8502aa9-24ce-4ed0-9396-7fd2183fb03d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,25 +10,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2vaRC5yO2doiwvfSgogFOYg97oc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -57,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1744381067345</updated>
       <workItem from="1744381068455" duration="117000" />
+      <workItem from="1745235128768" duration="23000" />
     </task>
     <servers />
   </component>

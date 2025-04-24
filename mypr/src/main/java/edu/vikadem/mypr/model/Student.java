@@ -21,7 +21,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Builder
 @ToString
 @Document
-public class Student {
+public class Student extends AuditMetadata {
     @Id
     private String id;
     private String name;

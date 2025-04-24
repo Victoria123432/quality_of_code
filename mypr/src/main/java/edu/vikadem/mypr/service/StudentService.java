@@ -31,7 +31,7 @@ public class StudentService {
         students.add(new Student("2", "Lida", "0000002", "2 course"));
         students.add(new Student("3", "Ira", "0000003", "1 course"));
     }
-    // @PostConstruct
+    @PostConstruct
     void init() {
         studentRepository.deleteAll();
         studentRepository.saveAll(students);
