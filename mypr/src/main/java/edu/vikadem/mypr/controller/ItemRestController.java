@@ -1,10 +1,11 @@
 package edu.vikadem.mypr.controller;
 
 import edu.vikadem.mypr.model.Student;
-import edu.vikadem.mypr.repository.StudentRepository;
 import edu.vikadem.mypr.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import request.StudentCreateRequest;
+import request.StudentUpdateRequest;
 
 import java.util.List;
 
@@ -36,10 +37,18 @@ public class ItemRestController {
         return studentService.create(student);
     }
 
+    //request
+    @PostMapping("/dto")
+    public Student insert(@RequestBody StudentCreateRequest request) {return studentService.create(request);}
+
     @PutMapping
     public Student edit(@RequestBody Student student) {
         return studentService.update(student);
     }
+
+    //request
+    @PutMapping("/dto")
+    public Student edit(@RequestBody StudentUpdateRequest request) {return studentService.update(request);}
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         studentService.delById(id);

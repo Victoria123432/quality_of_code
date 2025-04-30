@@ -31,8 +31,8 @@ public class RepositoryTest {
     @BeforeEach
     void setUp() {
         Student vira = new Student("1", "Vira", "123", "###test");
-        Student rina = new Student("2", "Rina", "456", "###test");
-        Student lara = new Student("3", "Lara", "789", "###test");
+        Student rina = new Student( "2", "Rina", "456", "###test");
+        Student lara = new Student( "3", "Lara", "789", "###test");
         underTest.saveAll(List.of(vira, rina, lara));
     }
     @AfterEach

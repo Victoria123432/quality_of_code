@@ -13,6 +13,10 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
+import java.util.List;
+import java.time.LocalDateTime;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,14 +25,24 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Builder
 @ToString
 @Document
-public class Student extends AuditMetadata {
+public class Student {
     @Id
     private String id;
     private String name;
     private String code;
     private String description;
+    private LocalDateTime createDate;
+    private List<LocalDateTime> updateDate;
 
-    public Student(String name, String code, String description) {
+
+    public Student( String name, String code, String description) {
+        this.name = name;
+        this.code = code;
+        this.description = description;
+    }
+
+    public Student(String id, String name, String code, String description) {
+        this.id = id;
         this.name = name;
         this.code = code;
         this.description = description;
