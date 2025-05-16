@@ -53,6 +53,14 @@ public class StudentService {
     }
 
     public Student create(StudentCreateRequest request) {
+        if (studentRepository.existsByCode(request.code())){
+            return null;
+        }
+        if (request == null
+                || request.name() == null || request.name().trim().isEmpty()
+                || request.code() == null || request.code().trim().isEmpty()) {
+            return null;
+        }
         Student student = mapToStudent(request);
         student.setCreateDate(LocalDateTime.now());
         student.setUpdateDate(new ArrayList<LocalDateTime>());
@@ -75,6 +83,14 @@ public class StudentService {
 
     public Student update(StudentUpdateRequest request) {
         Student studentPersisted = studentRepository.findById(request.id()).orElse(null);
+        if (studentRepository.existsByCode(request.code())){
+            return null;
+        }
+        if (request == null
+                || request.name() == null || request.name().trim().isEmpty()
+                || request.code() == null || request.code().trim().isEmpty()) {
+            return null;
+        }
         if (studentPersisted != null) {
             List<LocalDateTime> updateDates = studentPersisted.getUpdateDate();
             updateDates.add(LocalDateTime.now());
